@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.center {
+  padding-left: 11vw;
+  padding-right: 11vw;
+}
+.heading {
+  padding-bottom: 65px;
+}
+.heading_top {
+  background-color: #222;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.img_heading_top_left {
+  padding-top: 18px;
+  padding-bottom: 19px;
+  padding-right: 41px;
+}
+.heading_top_menu {
+  align-self: center;
+  justify-self: end;
+}
+.heading_bottom {
+  background-color: #f1e4e6;
+  height: 47.7vw;
+  width: 100vw;
+}
+.heading_bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.heading_bottom_img {
+  width: 50vw;
+  height: auto;
+}
+.right_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading_bottom_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  padding-left: 16px;
+  color: #222;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 0.7em;
+  max-width: 377px;
+  padding-right: 21vw;
+}
+.top_text_small {
+  font-size: 32px;
+}
+.top_text_small_pink {
+  color: #f16d7f;
+  font-size: 32px;
+}
+
+.catalogue {
+  display: grid;
+  grid-template-columns: repeat(3, 22vw);
+  gap: 60px;
+}
+.item {
+  position: relative;
+}
+.catalogue_img {
+  width: 22.5vw;
+  height: auto;
+}
+/* .item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(33, 22, 22, 0.7);
+  background-blend-mode: multiply;
+} */
+.catalogue_text {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  top: 6.5vw;
+  left: 6.2px;
+  width: 100%;
+}
+.catalogue_text_pink {
+  color: #f16d7f;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.item4 {
+  display: grid;
+  grid-column: span 3;
+}
+.catalogue_text4 {
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  top: 5vh;
+  left: 4vh;
+  width: 100%;
+}
+
+.catalogue_img4 {
+  width: 71vw;
+  height: auto;
+  /* background-color: #211616b2;
+  background-blend-mode: multiply; */
+  /* background: rgba(33, 22, 22, 0.7); */
+}
+
+.content_goods {
+  display: grid;
+  grid-template-columns: repeat(3, 22vw);
+  gap: 60px;
+  justify-content: center;
+}
+.content_title_big {
+  color: #222;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding-top: 6vw;
+  padding-bottom: 6px;
+}
+.content_title {
+  display: flex;
+  color: #000;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-items: center;
+  justify-content: start;
+  margin-top: 96px;
+  padding-bottom: 6px;
+}
+.content_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9f9f9f;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 48px;
+  text-align: start;
+}
+.content_img {
+  width: 22.5vw;
+  height: auto;
+}
+.good_pinkstyle {
+  background-color: #f7e4e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22.5vw;
+  height: auto;
+  padding-bottom: 3.65vw;
+}
+
+.good_pinkstyle_img {
+  width: 8vw;
+  height: auto;
+}
+.price {
+  color: #f16d7f;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 20px;
+  margin-bottom: 48px;
+}
+.bottom_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom_btn {
+  color: #f26376;
+  border: 0.5mm solid #f26d76;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px 39px 14px 39px;
+}
