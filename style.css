@@ -46,9 +46,6 @@ button {
 .heading_bottom {
   background-color: #f1e4e6;
   height: 47.7vw;
-  width: 100vw;
-}
-.heading_bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -407,7 +404,7 @@ button {
     padding-left: 32px;
   }
   .heading_top_menu {
-     padding-right: 16px;
+    padding-right: 16px;
   }
   .title {
     font-size: 44px;
@@ -441,7 +438,6 @@ button {
   .good_pinkstyle_img {
     width: 17.3vw;
     height: auto;
-    position: center;
   }
   .good_pinkstyle {
     width: 100%;
@@ -533,7 +529,6 @@ button {
   }
   .catalogue_img4 {
     height: 111px;
-    width: 100wh;
     object-fit: cover;
   }
   .catalogue_text4 {
@@ -558,25 +553,25 @@ button {
   .content_goods {
     grid-template-columns: repeat(1, 100%);
   }
-    .good_pinkstyle_img {
+  .good_pinkstyle_img {
     width: 50%;
   }
   .bottom_button {
     margin-bottom: 85px;
   }
-  .top_article{
+  .top_article {
     grid-template-columns: repeat(1, 100%);
   }
-  .article1_figure{
+  .article1_figure {
     width: 100%;
   }
-  .article1_text{
+  .article1_text {
     margin-bottom: 0;
   }
-  .top_article{
-  padding-bottom: 81px; 
+  .top_article {
+    padding-bottom: 81px;
   }
-  .article{ 
+  .article {
     height: auto;
   }
   .article2 {
@@ -589,5 +584,4 @@ button {
     padding-bottom: 6px;
     padding-top: 43px;
   }
-  
 }
