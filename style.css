@@ -358,6 +358,13 @@ button {
   flex-direction: column;
   justify-content: center;
 }
+.btn_img{
+  position: relative;
+}
+.subscribe_btn_text{
+  position: absolute;
+  padding-left: 18px;
+}
 .footer {
   background-color: #222224;
   height: 79px;
