@@ -52,13 +52,9 @@ a {
 }
 
 .carousel-inner {
+  padding-left: 25vw;
   transition: 0.5s;
   background-color: #f7f7f7;
-}
-
-.carousel_item_img {
-  padding-left: 35%;
-  padding-right: 35%;
 }
 
 .carousel-control-next-icon {
