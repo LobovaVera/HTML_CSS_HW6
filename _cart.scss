@@ -1,0 +1,25 @@
+.cart{
+    display: flex;
+    flex-direction: columns;
+}
+.cart__goods-box{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    &__good{
+display: flex;
+flex-direction: row;
+    }
+    &__ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.shipping{
+    &__title{
+
+    }
+    &__form{
+
+    }
+}
