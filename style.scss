@@ -2,6 +2,7 @@
 @import "mixins";
 // @import "extensions";
 @import "product";
+@import"catalog";
 
 * {
   margin: 0;
@@ -124,7 +125,7 @@ button {
       transition: 0.5s;
     }
     &_text {
-      color: #fff;
+      color: $mainWhite;
       text-align: center;
       font-size: 16px;
       font-style: normal;
@@ -153,7 +154,7 @@ button {
   justify-content: center;
 }
 .catalogue_item_text4 {
-  color: #fff;
+  color: $mainWhite;
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -222,7 +223,7 @@ button {
       line-height: normal;
       align-items: center;
       justify-content: start;
-      margin-top: 96px;
+      margin-top: 23px;
       padding-bottom: 6px;
     }
     .content_text {
@@ -267,7 +268,6 @@ button {
   align-items: center;
   margin-top: 48px;
   margin-bottom: 60px;
-  
 }
 .bottom_btn {
   color: #f26376;
@@ -286,62 +286,59 @@ button {
 .article {
   background-color: $blackColor;
   height: 341px;
+  .top_article {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+    gap: 2vw;
+    justify-items: center;
+    .article1_figure {
+      margin-top: 103px;
+      width: 21vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .article1_img {
+        padding-bottom: 28px;
+      }
+      .article1_title {
+        color: #fbfbfb;
+        font-size: 19.96px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-bottom: 16px;
+      }
+      .article1_text {
+        color: #fbfbfb;
+        text-align: center;
+        font-size: 13.972px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        max-width: 310px;
+        margin-bottom: 108px;
+        opacity: 0.7;
+      }
+    }
+  }
 }
-.top_article {
-  display: grid;
-  grid-template-columns: repeat(3, 30%);
-  justify-content: center;
-  gap: 2vw;
-  justify-items: center;
-}
-.article1_figure {
-  margin-top: 103px;
-  width: 21vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.article1_img {
-  padding-bottom: 28px;
-}
-.article1_title {
-  color: #fbfbfb;
-  font-size: 19.96px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding-bottom: 16px;
-}
-.article1_text {
-  color: #fbfbfb;
-  text-align: center;
-  font-size: 13.972px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  max-width: 310px;
-  margin-bottom: 108px;
-  opacity: 0.7;
-}
-.article2 {
-  background: url(img/footer/footer_bg_img_opacity30.png) no-repeat 0 0;
-  height: 448px;
-  //   background-size: 100% 100%;
-  background-size: cover;
-}
+
 .article2 {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   justify-content: center;
   align-items: center;
-}
+  background: url(img/footer/footer_bg_img_opacity30.png) no-repeat 0 0;
+  height: 448px;
+  //   background-size: 100% 100%;
+  background-size: cover;
 .article2_left_figure {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
 .article2_img {
   padding-bottom: 30px;
 }
@@ -356,13 +353,11 @@ button {
 .article2_italic_left_text {
   font-style: italic;
 }
+}
 .article2_right_figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.article2_right_figure {
   &_subscribe_form {
     display: flex;
     flex-direction: column;
@@ -403,7 +398,7 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fff;
+        color: $mainWhite;
         text-align: center;
         font-size: 14px;
         font-style: normal;
@@ -418,6 +413,7 @@ button {
       }
     }
   }
+}
 }
 
 .footer {
@@ -503,15 +499,22 @@ button {
   //     width: 100%;
   //   }
   .content_img_box:hover::after {
-    top: 23vw;
-    left: 15vw;
+    // top: 23vw;
+    // left: 15vw;
   }
   .content_goods {
     grid-template-columns: repeat(2, 45vw);
     gap: 16px;
-  }
-  .content_img {
-    width: 100%;
+    &_good {
+      .content_img_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .content_img {
+          // width: 100%;
+        }
+      }
+    }
   }
 
   .good_pinkstyle {
@@ -616,7 +619,7 @@ button {
     object-fit: cover;
   }
   .catalogue_text4 {
-    color: #fff;
+    color: $mainWhite;
     text-align: center;
     font-size: 16px;
     font-style: normal;
@@ -674,5 +677,4 @@ button {
     padding-bottom: 6px;
     padding-top: 43px;
   }
-
 }

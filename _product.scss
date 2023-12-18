@@ -53,9 +53,14 @@ a {
 }
 
 .carousel-inner {
-  padding-left: 25vw;
+  margin: 0 auto;
+  display: block;
   transition: 0.5s;
   background-color: #f7f7f7;
+}
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+  display: flex;
+  justify-content: center;
 }
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2998 23.2499L17.0498 15.4999L9.2998 7.7499L10.8498 4.6499L21.6998 15.4999L10.8498 26.3499L9.2998 23.2499Z' fill='black'/%3E%3C/svg%3E%0A");
@@ -81,9 +86,24 @@ a {
   display: flex;
   justify-content: center;
   height: 601px;
+  .bottom_btn {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+  }
+  
+  .bottom_btn_icon {
+    transition: 1s;
+  }
+  
+  .bottom_btn:hover .bottom_btn_icon2 {
+    fill: $mainWhite;
+    transition: 1s;
+  }
+  
 }
 .description {
-  background-color: #fff;
+  background-color: $mainWhite;
   width: 71vw;
   height: 601px;
   display: flex;
@@ -133,26 +153,28 @@ a {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    margin-bottom: 145px;
+    margin-bottom: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .product_descr_price_hr {
-    width: 60vw;
+    width: 641px;
     margin-bottom: 64px;
     margin-right: auto;
     margin-left: auto;
     border-top: 1px solid #6f6e6e;
+    position: relative;
   }
-}
-
-.product_filter {
+  .product_filter {
   display: flex;
   flex-direction: row;
   gap: 42px;
-  padding-top: 64px;
+  // padding-top: 64px;
+  position: absolute;
+  z-index:1;
+  top: 64vw;
 
   .product_filter_details {
     .filter1 {
@@ -175,7 +197,7 @@ a {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      background-color: #fff;
+      background-color: $mainWhite;
       box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
       padding: 6px;
 
@@ -243,17 +265,6 @@ a {
   }
 }
 
-.bottom_btn {
-  display: flex;
-  gap: 17px;
-  align-items: center;
 }
 
-.bottom_btn_icon {
-  transition: 1s;
-}
 
-.bottom_btn:hover .bottom_btn_icon2 {
-  fill: #fff;
-  transition: 1s;
-}
