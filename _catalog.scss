@@ -7,7 +7,10 @@ summary {
 summary::-webkit-details-marker {
   display: none;
 }
-
+.content__goods_hover:hover {
+  -webkit-filter: brightness(50%);
+  transition: all 0.5s ease;
+}
 .good_pinkstyle2 {
   background-color: #f7e4e2;
   display: flex;

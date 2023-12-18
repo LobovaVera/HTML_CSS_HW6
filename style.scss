@@ -421,8 +421,8 @@ button {
   height: 79px;
   text-align: center;
   display: flex;
-  justify-content: center;
-  gap: 50vw;
+  justify-content: space-around;
+  
   &_left_text {
     color: #fbfbfb;
     font-size: 16px;
