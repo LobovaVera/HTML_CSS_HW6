@@ -1,5 +1,5 @@
 @import "vars";
-@import "product";
+
 summary {
   display: block;
 }
@@ -19,15 +19,12 @@ summary::-webkit-details-marker {
   width: 100%;
   height: auto;
   padding: 6px;
-
-  // padding-bottom: 3.65vw;
   .good_pinkstyle_img2 {
     width: 9vw;
     height: auto;
   }
 }
 .catalog_filter {
-  // padding:39px;
   height: 132px;
   position: relative;
   display: flex;
