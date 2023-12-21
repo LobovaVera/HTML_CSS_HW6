@@ -434,7 +434,11 @@ summary::-webkit-details-marker {
 .cart-product__li_quantity {
   color: #6f6e6e;
   border: 1px solid #eaeaea;
-  padding: 1px 16px;
+  width: 44px;
+  text-align: center;
+}
+.cart-product__li_quantity::-webkit-outer-spin-button, .cart-product__li_quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .cart-product__btns {
   display: flex;

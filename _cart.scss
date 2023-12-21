@@ -71,7 +71,13 @@
       &_quantity {
         color: #6f6e6e;
         border: 1px solid #eaeaea;
-        padding: 1px 16px;
+        // padding: 1px 16px;
+        width:44px;
+        text-align: center;
+        
+      }
+      &_quantity::-webkit-outer-spin-button, &_quantity::-webkit-inner-spin-button{
+        -webkit-appearance: none;
       }
     }
     &__btns {
