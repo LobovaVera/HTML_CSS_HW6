@@ -1,6 +1,5 @@
 @import "vars";
 @import "mixins";
-// @import "extensions";
 @import "product";
 @import "catalog";
 @import "cart";
@@ -8,15 +7,32 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
+
+html,body,div,img,a,hr,table,tr,td,h1,h2,h3,h4,h5,h6,input,select,textarea,button {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: none;
+  vertical-align: top;
+  transition: none;
+}
+
 a {
   text-decoration: none;
-  // color: #636363;
 }
+
 img {
   -webkit-filter: brightness(100%);
 }
+
 button {
   background: none;
   color: inherit;
@@ -26,6 +42,7 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+
 %darken_hover_img:hover {
   -webkit-filter: brightness(50%);
   -webkit-transition: all 1s ease;
@@ -41,33 +58,36 @@ button {
 }
 
 //heading
-.heading_padding {
-  padding-bottom: 65px;
-}
+
 .heading {
-  &_top {
-    background-color: $mainBlackColor;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    &_logos {
-      &_img {
-        padding-top: 18px;
-        padding-bottom: 19px;
-        padding-right: 41px;
-        padding-left: 16px;
-      }
-    }
-    &_menu {
-      display: flex;
-      align-self: center;
-      justify-self: end;
-      gap: 33px;
-      padding-right: 16px;
-      &_img:hover path {
-        fill: $mainColor;
-      }
-    }
+  background-color: $mainBlackColor;
+  // height: 76px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  align-items: center;
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 41px;
+  }
+
+  .heading__log-img {
+    padding-top: 12px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+  }
+
+  &__img:hover path {
+    fill: $mainColor;
   }
 }
 
@@ -76,12 +96,15 @@ button {
   height: 47.7vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 64px;
+
   &_left {
     &_img {
       width: 50vw;
       height: auto;
     }
   }
+
   &_right {
     display: flex;
     justify-content: center;
@@ -91,6 +114,7 @@ button {
       display: flex;
       justify-content: center;
       align-items: center;
+
       &_title {
         padding-left: 16px;
         // padding-right: 21vw;
@@ -104,6 +128,7 @@ button {
         .top_text_small {
           font-size: 32px;
         }
+
         .top_text_small_pink {
           color: $mainColor;
           font-size: 32px;
@@ -112,19 +137,23 @@ button {
     }
   }
 }
+
 //catalogue
 .catalogue {
   display: grid;
   grid-template-columns: repeat(3, 22vw);
   gap: 30px;
   justify-content: center;
+
   &_item {
     position: relative;
+
     &_img {
       @extend %darken_hover_img;
       width: 100%;
       transition: 0.5s;
     }
+
     &_text {
       color: $mainWhite;
       text-align: center;
@@ -136,6 +165,7 @@ button {
       top: 6.5vw;
       left: 6.2px;
       width: 100%;
+
       &_pink {
         color: $mainColor;
         font-size: 24px;
@@ -154,6 +184,7 @@ button {
   height: 100%;
   justify-content: center;
 }
+
 .catalogue_item_text4 {
   color: $mainWhite;
   text-align: center;
@@ -166,6 +197,7 @@ button {
   left: 2vh;
   width: 100%;
 }
+
 //content
 .content_article {
   &_title {
@@ -178,6 +210,7 @@ button {
     padding-top: 6vw;
     padding-bottom: 6px;
   }
+
   &_text {
     display: flex;
     align-items: center;
@@ -201,9 +234,11 @@ button {
   &_good {
     background-color: #f8f8f8;
     display: grid;
+
     .content_img_box {
       position: relative;
     }
+
     .content_img_box:hover::after {
       content: url(img/catalogue/add_to_cart.svg);
       position: absolute;
@@ -211,10 +246,12 @@ button {
       top: 9vw;
       left: 4vw;
     }
+
     .content_img {
       @extend %darken_hover_img;
       width: 100%;
     }
+
     .content_title {
       display: flex;
       color: #000;
@@ -227,6 +264,7 @@ button {
       margin-top: 23px;
       padding-bottom: 6px;
     }
+
     .content_text {
       color: #5d5d5d;
       font-size: 14px;
@@ -245,11 +283,13 @@ button {
   width: 100%;
   height: auto;
   padding-bottom: 3.65vw;
+
   .good_pinkstyle_img {
     width: 8vw;
     height: auto;
   }
 }
+
 .good_pinkstyle:hover {
   @extend %darken_hover_img;
   width: 100%;
@@ -263,6 +303,7 @@ button {
   line-height: normal;
   padding-bottom: 20px;
 }
+
 .bottom_button {
   display: flex;
   justify-content: center;
@@ -270,6 +311,7 @@ button {
   margin-top: 48px;
   margin-bottom: 60px;
 }
+
 .bottom_btn {
   color: #f26376;
   border: 0.5mm solid #f26d76;
@@ -280,29 +322,33 @@ button {
   padding: 15px 39px 14px 39px;
   transition: 1s;
 }
+
 .bottom_btn:hover {
   background-color: $mainColor;
   color: white;
 }
-.article {
+
+.advantages {
   background-color: $blackColor;
-  height: 341px;
+  padding-top: 103px;
+  padding-bottom: 103px;
+
   .top_article {
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
+    display: flex;
     justify-content: center;
-    gap: 2vw;
     justify-items: center;
+
     .article1_figure {
-      margin-top: 103px;
       width: 21vw;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       .article1_img {
         padding-bottom: 28px;
       }
+
       .article1_title {
         color: #fbfbfb;
         font-size: 19.96px;
@@ -311,6 +357,7 @@ button {
         line-height: normal;
         padding-bottom: 16px;
       }
+
       .article1_text {
         color: #fbfbfb;
         text-align: center;
@@ -326,95 +373,106 @@ button {
   }
 }
 
-.article2 {
+.contacts {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
   background: url(img/footer/footer_bg_img_opacity30.png) no-repeat 0 0;
-  height: 448px;
-  //   background-size: 100% 100%;
+  padding-top: 97px;
+  padding-bottom: 126px;
   background-size: cover;
-.article2_left_figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-.article2_img {
-  padding-bottom: 30px;
-}
-.article2_left_text {
-  color: $blackColor;
-  text-align: center;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.article2_italic_left_text {
-  font-style: italic;
-}
-}
-.article2_right_figure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  &_subscribe_form {
+
+  &__figure {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    .input_box_title {
-      display: flex;
-      flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+
+    &__img {
+      padding-bottom: 30px;
+    }
+
+    &_left-text {
       color: $blackColor;
       text-align: center;
-      font-size: 24px;
+      font-size: 20px;
       font-style: normal;
-      font-weight: 700;
-      line-height: 167.2%;
-      &_small {
-        font-size: 18px;
-        font-weight: 400;
-      }
+      font-weight: 400;
+      line-height: normal;
     }
-    .input_box {
+
+    .italic {
+      font-style: italic;
+    }
+  }
+
+  &__right-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__subscribe_form {
       display: flex;
-      flex-direction: row;
-      &_subscribe_input {
-        border-inline: none;
-        outline: none;
-        border: none;
-        color: $blackColor;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        opacity: 6.71;
-        background-color: #e1e1e1;
-        padding: 14px 22px;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-      }
-      &_subscribe_btn {
+      flex-direction: column;
+      align-items: center;
+
+      .input_box_title {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $mainWhite;
-        text-align: center;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        display: flex;
-        width: 85px;
         flex-direction: column;
-        background-color: #f16d7f;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
+        color: $blackColor;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 167.2%;
+
+        &_small {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+
+      .input_box {
+        display: flex;
+        flex-direction: row;
+
+        &_subscribe_input {
+          border-inline: none;
+          outline: none;
+          border: none;
+          color: $blackColor;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 6.71;
+          background-color: #e1e1e1;
+          padding: 14px 22px;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+        }
+
+        &_subscribe_btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $mainWhite;
+          text-align: center;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          display: flex;
+          width: 85px;
+          flex-direction: column;
+          background-color: #f16d7f;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
       }
     }
   }
-}
 }
 
 .footer {
@@ -423,7 +481,7 @@ button {
   text-align: center;
   display: flex;
   justify-content: space-around;
-  
+
   &_left_text {
     color: #fbfbfb;
     font-size: 16px;
@@ -433,23 +491,28 @@ button {
     padding-top: 30px;
     padding-left: 30px;
   }
+
   .social_networks {
     padding-top: 24px;
     padding-bottom: 23px;
     display: flex;
     gap: 6px;
     padding-right: 14vw;
+
     .footer_nav {
       .footer_nav_icon {
         transition: 1s;
       }
+
       .footer_nav_icon2 {
         transition: 1s;
       }
     }
+
     .footer_nav:hover .footer_nav_icon {
       fill: $mainColor;
     }
+
     .footer_nav:hover .footer_nav_icon2 {
       fill: white;
     }
@@ -460,6 +523,7 @@ button {
   height: 100%;
   background-color: #eaeaea;
 }
+
 .product_text {
   height: 100%;
 }
@@ -469,9 +533,11 @@ button {
     padding-left: calc(50% - 367.5px);
     padding-right: calc(50% - 367.5px);
   }
+
   .heading_top_logos_img {
     padding-right: 41px;
   }
+
   .heading_top_menu {
     padding-left: 32px;
     padding-right: 16px;
@@ -483,12 +549,15 @@ button {
     max-width: none;
     padding-right: 0;
   }
+
   .top_text_small {
     font-size: 24px;
   }
+
   .top_text_small_pink {
     font-size: 24px;
   }
+
   .catalogue {
     grid-template-columns: repeat(3, 30vw);
   }
@@ -496,6 +565,7 @@ button {
   .catalogue_item_img {
     width: 100%;
   }
+
   //   .catalogue_item_img4 {
   //     width: 100%;
   //   }
@@ -503,14 +573,17 @@ button {
     // top: 23vw;
     // left: 15vw;
   }
+
   .content_goods {
     grid-template-columns: repeat(2, 45vw);
     gap: 16px;
+
     &_good {
       .content_img_box {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .content_img {
           // width: 100%;
         }
@@ -520,24 +593,30 @@ button {
 
   .good_pinkstyle {
     width: 100%;
+
     .good_pinkstyle_img {
       width: 17.3vw;
       height: auto;
     }
   }
+
   .content_article_text {
     margin-bottom: 18px;
   }
+
   .price {
     padding-bottom: 20px;
     margin-bottom: 0;
   }
+
   .bottom_button {
     margin-bottom: 70.5px;
   }
+
   .article2 {
     grid-template-columns: repeat(1, 100%);
   }
+
   .footer {
     gap: 39vw;
   }
@@ -548,10 +627,12 @@ button {
     padding-left: calc(50% - 347px);
     padding-right: calc(50% - 347px);
   }
+
   .heading_top_logos_img {
     padding-right: 16px;
     padding-left: 16px;
   }
+
   .heading_top_menu {
     background-image: url(img/mobile/crumbs.svg);
     width: 32px;
@@ -559,11 +640,13 @@ button {
     padding-right: 16px;
     margin-right: 16px;
   }
+
   .heading_bottom {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding-top: 95px;
     padding-bottom: 149px;
+
     &_left {
       &_img {
         display: none;
@@ -573,19 +656,23 @@ button {
         height: 0;
       }
     }
+
     &_right {
       display: flex;
       justify-content: center;
       align-items: center;
+
       &_box {
         &_title {
           font-size: 38px;
           padding-left: 16px;
           max-width: none;
           padding-right: 0;
+
           .top_text_small {
             font-size: 20px;
           }
+
           .top_text_small_pink {
             font-size: 20px;
           }
@@ -600,6 +687,7 @@ button {
     gap: 30px;
     justify-content: center;
   }
+
   .catalogue_text {
     line-height: normal;
     position: absolute;
@@ -607,6 +695,7 @@ button {
     top: 50%;
     width: 100%;
   }
+
   .item4 {
     display: flex;
     grid-column: 1;
@@ -615,10 +704,12 @@ button {
     justify-content: center;
     object-fit: cover;
   }
+
   .catalogue_img4 {
     height: 111px;
     object-fit: cover;
   }
+
   .catalogue_text4 {
     color: $mainWhite;
     text-align: center;
@@ -631,46 +722,59 @@ button {
     left: 4vh;
     width: 100%;
   }
+
   .content_article_title {
     font-size: 30px;
   }
+
   .catalogue_text4 {
     left: 0;
     top: 30px;
   }
+
   .content_img_box:hover::after {
     top: 60vw;
     left: 40vw;
   }
+
   .content_goods {
     grid-template-columns: repeat(1, 100%);
   }
+
   .good_pinkstyle {
     .good_pinkstyle_img {
       width: 50%;
     }
   }
+
   .bottom_button {
     margin-bottom: 85px;
   }
+
   .top_article {
     grid-template-columns: repeat(1, 100%);
   }
+
   .article1_figure {
     width: 100%;
   }
+
   .article1_text {
     margin-bottom: 0;
   }
+
   .top_article {
     padding-bottom: 81px;
   }
-  .article {
+
+  .advantages {
     height: auto;
   }
+
   .article2 {
     grid-template-columns: repeat(1, 100%);
   }
+
   .footer {
     gap: 0;
     height: auto;
