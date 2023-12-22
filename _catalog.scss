@@ -59,11 +59,7 @@ summary::-webkit-details-marker {
       gap: 11px;
       align-items: center;
       &_heading {
-        color: $mainBlackColor;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
+        @include text_style(14px, 600, $mainBlackColor)
       }
       //   &_heading:hover {
       //     text-shadow: 2px 2px 2px grey;
@@ -77,11 +73,7 @@ summary::-webkit-details-marker {
       margin-top: 16px;
       .filter_item {
         &_heading {
-          color: #6f6e6e;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
+          @include text_style(14px, 400, #6f6e6e);
           padding: 8px 11px 11px 11px;
           border-bottom: 1px solid #ebebeb;
           border-left: 5px solid $mainColor;
@@ -99,11 +91,7 @@ summary::-webkit-details-marker {
           padding: 24px 16px;
 
           .filter_link {
-            color: #6f6e6e;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            @include text_style(14px, 400, #6f6e6e)
           }
         }
       }
@@ -116,9 +104,4 @@ summary::-webkit-details-marker {
     display: flex;
     gap: 28px;
   }
-  //   .sort:last-child .filter_details_box{
-  // margin-left: 50px;
-  //   }
-  // }
-
 }

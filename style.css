@@ -26,7 +26,6 @@ ul {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  font-family: Lato;
 }
 .top_menu .breadcrumbs {
   display: flex;
@@ -557,6 +556,185 @@ summary::-webkit-details-marker {
   color: #FFF;
   border: 1px solid #FFF;
   box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.reg {
+  display: flex;
+  width: 100%;
+  gap: 128px;
+  margin-top: 64px;
+  margin-bottom: 96px;
+}
+.reg__form {
+  display: flex;
+  flex-direction: column;
+}
+.reg__form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.reg__form-label {
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.reg__form-input {
+  color: #222;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  border: 1px solid #a4a4a4;
+  display: block;
+  margin-bottom: 20px;
+  padding: 13px 0 15px 16px;
+  text-align: start;
+  width: 360px;
+}
+.reg__form-input::-moz-placeholder {
+  color: #222;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.reg__form-input::placeholder {
+  color: #222;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.reg__form-input::-moz-placeholder:hover {
+  color: #b1b1b1;
+}
+.reg__form-input::placeholder:hover {
+  color: #b1b1b1;
+}
+.reg__form-additional-info {
+  color: #b1b1b1;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.reg__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 39px;
+  padding: 16px 20px 16px 29px;
+  width: 167px;
+  border: 1px solid #a4a4a4;
+  transition: all 0.5s;
+}
+.reg__btn-text {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.reg__btn:hover {
+  background-color: #f16d7f;
+  border: 1px solid #f16d7f;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+.reg__btn:hover .reg__btn-text {
+  color: #fff;
+}
+.reg__btn:hover .reg__btn-img path {
+  fill: #fff;
+}
+.reg__form-radio {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 34px;
+}
+.reg__form-radio-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.reg__form-radio-label {
+  color: #000;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.reg__form-radio-input {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.reg__form-radio-input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #a4a4a4;
+}
+.reg__form-radio-input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f16d7f;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+.reg__info {
+  max-width: 652px;
+}
+.reg__info-title {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 22px;
+}
+.reg__info-text {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 21px;
+}
+.reg__info-list {
+  list-style-image: url(img/registration/marker.svg);
+}
+.reg__info-list-item {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding-left: 6px;
+  padding-bottom: 16px;
 }
 
 * {

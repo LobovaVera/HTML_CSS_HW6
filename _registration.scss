@@ -1,0 +1,127 @@
+p {
+  margin-bottom: 0;
+}
+.reg {
+  display: flex;
+  width: 100%;
+  gap: 128px;
+  margin-top: 64px;
+  margin-bottom: 96px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &-label {
+      @include text_style(16px, 300, $mainBlackColor);
+      margin-bottom: 20px;
+    }
+    &-input {
+      @include main_input;
+    }
+    &-input::placeholder {
+      @include main_input_placeholder;
+    }
+    &-input::placeholder:hover {
+      @include main_input_placeholder_hover;
+    }
+    &-additional-info {
+      @include text_style(13px, 300, #b1b1b1);
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 39px;
+    padding: 16px 20px 16px 29px;
+    width: 167px;
+    border: 1px solid #a4a4a4;
+    transition: all 0.5s;
+    &-text {
+      @include text_style(14px, 400, $zeroBlackColor);
+    }
+  }
+  &__btn:hover {
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+  }
+  &__btn:hover &__btn-text {
+    color: $mainWhite;
+  }
+  &__btn:hover &__btn-img path {
+    fill: $mainWhite;
+  }
+  &__form-radio {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 34px;
+
+    &-wrapper {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    &-label {
+      @include text_style(11px, 300, $zeroBlackColor);
+    }
+    &-input {
+      position: relative;
+      height: 22px;
+      width: 22px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      outline: none;
+    }
+    &-input::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 2px solid #a4a4a4;
+    }
+    &-input:checked::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $mainColor;
+      transform: translate(-50%, -50%);
+      visibility: visible;
+    }
+  }
+
+  &__info {
+    max-width: 652px;
+    &-title {
+      @include text_style(24px, 300, $zeroBlackColor);
+      padding-bottom: 22px;
+    }
+    &-text {
+      @include text_style(24px, 300, $zeroBlackColor);
+      padding-bottom: 21px;
+    }
+    &-list {
+      list-style-image: url(img/registration/marker.svg);
+    }
+    &-list-item {
+      @include text_style(24px, 300, $zeroBlackColor);
+      padding-left: 6px;
+      padding-bottom: 16px;
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @import "product";
 @import "catalog";
 @import "cart";
+@import "registration";
 
 * {
   margin: 0;
@@ -566,14 +567,6 @@ button {
     width: 100%;
   }
 
-  //   .catalogue_item_img4 {
-  //     width: 100%;
-  //   }
-  .content_img_box:hover::after {
-    // top: 23vw;
-    // left: 15vw;
-  }
-
   .content_goods {
     grid-template-columns: repeat(2, 45vw);
     gap: 16px;
@@ -584,9 +577,6 @@ button {
         justify-content: center;
         align-items: center;
 
-        .content_img {
-          // width: 100%;
-        }
       }
     }
   }

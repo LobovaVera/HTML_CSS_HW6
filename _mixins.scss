@@ -4,3 +4,34 @@
     border: 1px solid #FFF;
     box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
 }
+
+@mixin main_input{
+    color: $mainBlackColor;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border: 1px solid #a4a4a4;
+    display: block;
+    margin-bottom: 20px;
+    padding: 13px 0 15px 16px;
+    text-align: start;
+    width: 360px;
+}
+@mixin main_input_placeholder {
+    color: $mainBlackColor;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+@mixin main_input_placeholder_hover {
+    color: #b1b1b1;
+}
+@mixin text_style ($font-size, $font-weigh, $color){
+    color: $color;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: $font-weigh;
+    line-height: normal;
+}
