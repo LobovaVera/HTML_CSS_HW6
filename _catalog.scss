@@ -105,3 +105,10 @@ summary::-webkit-details-marker {
     gap: 28px;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 367.5px);
+    padding-right: calc(50% - 367.5px);
+  }
+  
+}

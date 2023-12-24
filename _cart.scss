@@ -107,6 +107,7 @@
     }
     &__input {
       @include main_input;
+     
     }
     &__input::placeholder {
       @include main_input_placeholder;
@@ -122,24 +123,17 @@
       align-items: end;
       flex-direction: column;
       gap: 12px;
-      padding: 39px 34px 21px 0px;
+      padding: 39px 0px 21px 0px;
       border-bottom: 1px solid #e2e2e2;
       margin-right: 42.5px;
       margin-left: 42.5px;
     }
     &__sub-total {
-      color: #4a4a4a;
-      font-size: 11px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include text_style(11px, 400, #4a4a4a);
     }
     &__title {
-      color: #222;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
+      @include text_style(16px, 300, #222);
+      max-width: 330px;
       &_price {
         color: #f16d7f;
         font-size: 16px;
@@ -172,4 +166,20 @@
 }
 .cart-btn:hover {
   @include hover_pink;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cart{
+    flex-direction: column;
+    align-items: center;
+    &-shipping{
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
+       gap: 15px;
+       &__total{
+        height: 214px;
+        margin-top: 39px;
+       }
+    }
+  }
 }
