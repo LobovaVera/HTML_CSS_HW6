@@ -259,6 +259,10 @@ ul {
     visibility: hidden;
     position: absolute;
   }
+  .description {
+    width: 100%;
+    margin-top: 0px;
+  }
 }
 summary {
   display: block;
@@ -298,6 +302,7 @@ summary::-webkit-details-marker {
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .catalog_filter_left {
   top: 36px;
@@ -363,16 +368,53 @@ summary::-webkit-details-marker {
 }
 .catalog_filter .sort {
   position: relative;
-  left: 490px;
   top: 51px;
   display: flex;
   gap: 28px;
+}
+
+.pagination__div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 96px;
+}
+
+.pagination__box {
+  border: 1px solid #EBEBEB;
+  padding: 11px 16px 13px 16px;
+}
+
+.pagination__list {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  padding-left: 0;
+}
+.pagination__list-link {
+  color: #C4C4C4;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.pagination__list-link:hover {
+  color: #EF5B70;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .center {
     padding-left: calc(50% - 367.5px);
     padding-right: calc(50% - 367.5px);
+  }
+  .pagination__div {
+    margin-bottom: 63px;
+  }
+  .catalog_filter_left {
+    width: 360px;
   }
 }
 .cart {
@@ -1104,7 +1146,6 @@ button {
   gap: 30px;
 }
 .advantages .top_article .article1_figure {
-  width: 21vw;
   display: flex;
   flex-direction: column;
   align-items: center;
