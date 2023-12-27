@@ -88,11 +88,16 @@ ul {
   justify-content: center;
   height: 601px;
   border-bottom: 1px solid #eaeaea;
-  .bottom_btn {
-    display: flex;
-    gap: 17px;
-    align-items: center;
+  .bottom_button {
+    z-index: 1;
+    align-items: flex-end;
+    .bottom_btn {
+      display: flex;
+      gap: 17px;
+      align-items: center;
+    }
   }
+
   .bottom_btn_icon {
     transition: 1s;
   }
@@ -106,7 +111,7 @@ ul {
   width: 71vw;
   height: 601px;
   display: flex;
-   margin-top: -64px;
+  margin-top: -64px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -172,8 +177,8 @@ ul {
     gap: 42px;
     // padding-top: 64px;
     position: absolute;
-    z-index: 1;
-    top: 64vw;
+    z-index: 2;
+    top: 460px;
   }
 }
 .product_filter_details {
@@ -281,5 +286,31 @@ ul {
     width: 100%;
     margin-top: 0px;
   }
+}
+@media (max-width: 767px) {
+  .top_menu{
+    flex-direction: column;
+    gap: 32px;
+  }
+  .description {
+    width: 100%;
+    margin-top: 0px;
 
+    .product_descr_price {
+      margin-bottom: 31px;
+    }
+    .product_descr_price_hr {
+      width: 175px;
+    }
+    .product_descr_title2 {
+      margin-bottom: 31px;
+    }
+  }
+  .carousel-item {
+    height: 454px;
+  }
+
+  .description .product_filter {
+    top: 490px;
+  }
 }

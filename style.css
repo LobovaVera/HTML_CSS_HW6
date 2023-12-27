@@ -103,7 +103,11 @@ ul {
   height: 601px;
   border-bottom: 1px solid #eaeaea;
 }
-.description_box .bottom_btn {
+.description_box .bottom_button {
+  z-index: 1;
+  align-items: flex-end;
+}
+.description_box .bottom_button .bottom_btn {
   display: flex;
   gap: 17px;
   align-items: center;
@@ -181,8 +185,8 @@ ul {
   flex-direction: row;
   gap: 42px;
   position: absolute;
-  z-index: 1;
-  top: 64vw;
+  z-index: 2;
+  top: 460px;
 }
 
 .product_filter_details .filter1 {
@@ -262,6 +266,31 @@ ul {
   .description {
     width: 100%;
     margin-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .top_menu {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .description {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .description .product_descr_price {
+    margin-bottom: 31px;
+  }
+  .description .product_descr_price_hr {
+    width: 175px;
+  }
+  .description .product_descr_title2 {
+    margin-bottom: 31px;
+  }
+  .carousel-item {
+    height: 454px;
+  }
+  .description .product_filter {
+    top: 490px;
   }
 }
 summary {
@@ -1114,13 +1143,14 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.bottom_button_home-margin {
   margin-top: 48px;
   margin-bottom: 96px;
 }
-
-.bottom_btn {
-  color: #f26376;
+.bottom_button .bottom_btn {
   border: 0.5mm solid #f26d76;
+  color: #f26376;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
