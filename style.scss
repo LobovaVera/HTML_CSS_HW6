@@ -10,6 +10,9 @@
   padding: 0;
   font-family: "Lato", sans-serif;
 }
+figure {
+  margin: 0;
+}
 
 html,
 body,
@@ -650,6 +653,12 @@ button {
       padding-right: 16px;
       padding-left: 16px;
     }
+    .heading_img_to-dissappear {
+      position: absolute;
+      visibility: hidden;
+      z-index: 0;
+      left: -99999999px;
+    }
 
     .heading_top_menu {
       background-image: url(img/mobile/crumbs.svg);
@@ -788,6 +797,9 @@ button {
     gap: 48px;
     padding-top: 64px;
     padding-bottom: 109px;
+    .input_box_title_small{
+      font-size: 14px;
+    }
   }
   .footer {
     display: flex;
