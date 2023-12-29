@@ -12,7 +12,6 @@
     align-items: center;
     width: 100%;
     gap: 40px;
-
     &__img {
       width: 262px;
     }
@@ -33,11 +32,7 @@
       fill: $mainColor;
     }
     &__title {
-      color: #222;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include text_style(24px, 400, #222);
       padding-right: 125px;
       margin-top: 22px;
       margin-bottom: 42px;
@@ -51,18 +46,9 @@
       gap: 6px;
     }
     &__li {
-      color: #575757;
-      font-size: 22px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      list-style-type: none;
+      @include text_style(22px, 400, #575757);
       &_price {
-        color: #ef5b70;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include text_style(22px, 400, #ef5b70);
       }
 
       &_attribute {
@@ -71,7 +57,6 @@
       &_quantity {
         color: #6f6e6e;
         border: 1px solid #eaeaea;
-        // padding: 1px 16px;
         width: 44px;
         text-align: center;
       }
@@ -86,19 +71,13 @@
       width: 100%;
     }
   }
-
   &-shipping {
     display: flex;
     flex-direction: column;
     width: 50%;
     &__title {
-      color: #222;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include text_style(24px, 400, #222);
     }
-
     &__form {
       display: flex;
       flex-direction: column;
@@ -141,17 +120,12 @@
     }
   }
 }
-
 .cart-btn {
-  color: #000;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: normal;
+  @include text_style(14px, 300, #000);
   padding: 17px 40px 16px 39px;
   border: 1px solid #a4a4a4;
   transition: 0.5s;
 }
-
 .cart-btn_checkout-btn {
   width: 273px;
   background-color: #fff;
@@ -183,7 +157,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 767px) {
   .cart {
     margin-top: 39px;
     margin-bottom: 96px;
@@ -210,7 +184,7 @@
           font-size: 14px;
         }
         &_quantity {
-          @include text_style (10px, 400, #656565);
+          @include text_style(10px, 400, #656565);
           margin-left: 15px;
           width: 24px;
           margin-top: 2px;
@@ -242,7 +216,7 @@
       width: 360px;
     }
     &-btn_checkout-btn {
-           margin: 17px 34px 42px 43px;
+      margin: 17px 34px 42px 43px;
     }
   }
 }

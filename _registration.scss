@@ -127,16 +127,21 @@ p {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .reg{
+  .reg {
     gap: 22px;
   }
   .reg__info-title {
     @include text_style(16px, 300, $zeroBlackColor);
   }
-.reg__info-text{
-  @include text_style(16px, 300, $zeroBlackColor);
+  .reg__info-text {
+    @include text_style(16px, 300, $zeroBlackColor);
+  }
+  .reg__info-list-item {
+    @include text_style(16px, 300, $zeroBlackColor);
+  }
 }
-.reg__info-list-item{
-  @include text_style(16px, 300, $zeroBlackColor);
-}
+@media (max-width: 767px) {
+  .reg {
+    flex-direction: column;
+  }
 }

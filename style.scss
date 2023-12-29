@@ -38,7 +38,6 @@ button {
   border-radius: 0;
   margin: 0;
   padding: 0;
-
   font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
@@ -73,46 +72,35 @@ button {
   -ms-transition: all 1s ease;
   transition: all 0.5s ease;
 }
-
 .center {
   padding-left: calc(50% - $screenWidth/2);
   padding-right: calc(50% - $screenWidth/2);
 }
 
 //heading
-
 .heading {
   background-color: $mainBlackColor;
-  // height: 76px;
   display: flex;
   justify-content: space-between;
   padding-top: 18px;
   padding-bottom: 18px;
   align-items: center;
-
   &__logos {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 41px;
   }
-
-  .heading__log-img {
-    // padding-top: 12px;
-  }
-
   &__menu {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 34px;
   }
-
   &__img:hover path {
     fill: $mainColor;
   }
 }
-
 .heading_bottom {
   background-color: #f1e4e6;
   height: 47.7vw;
@@ -138,15 +126,10 @@ button {
       align-items: center;
 
       &_title {
+        @include text_style(48px, 900, $mainBlackColor);
         padding-left: 16px;
-        // padding-right: 21vw;
-        color: $mainBlackColor;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 900;
         line-height: 0.7em;
         max-width: 377px;
-
         .top_text_small {
           font-size: 32px;
         }
@@ -159,7 +142,6 @@ button {
     }
   }
 }
-
 //catalogue
 .catalogue {
   display: grid;
@@ -169,36 +151,23 @@ button {
 
   &_item {
     position: relative;
-
     &_img {
       @extend %darken_hover_img;
       width: 100%;
       transition: 0.5s;
     }
-
     &_text {
-      color: $mainWhite;
-      text-align: center;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      @include text_style(16px, 400, $mainWhite);
       position: absolute;
       top: 6.5vw;
-      left: 6.2px;
       width: 100%;
-
+      text-align: center;
       &_pink {
-        color: $mainColor;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        @include text_style(22px, 700, $mainColor);
       }
     }
   }
 }
-
 .item4 {
   display: flex;
   grid-column: 1/ -1;
@@ -206,17 +175,11 @@ button {
   height: 100%;
   justify-content: center;
 }
-
 .catalogue_item_text4 {
-  color: $mainWhite;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  @include text_style(16px, 400, $mainWhite);
   position: absolute;
   top: 3vh;
-  left: 2vh;
+  left: 40%;
   width: 100%;
 }
 
@@ -659,7 +622,6 @@ button {
       z-index: 0;
       left: -99999999px;
     }
-
     .heading_top_menu {
       background-image: url(img/mobile/crumbs.svg);
       width: 32px;
@@ -668,13 +630,11 @@ button {
       margin-right: 16px;
     }
   }
-
   .heading_bottom {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding-top: 95px;
     padding-bottom: 149px;
-
     &_left {
       &_img {
         display: none;
@@ -684,12 +644,10 @@ button {
         height: 0;
       }
     }
-
     &_right {
       display: flex;
       justify-content: center;
       align-items: center;
-
       &_box {
         &_title {
           font-size: 38px;
@@ -708,18 +666,20 @@ button {
       }
     }
   }
-
   .catalogue {
     display: grid;
     grid-template-columns: repeat(1, 100%);
     gap: 30px;
     justify-content: center;
-    .catalogue_item_text {
+    &_item_text {
       line-height: normal;
       position: absolute;
-      left: 0px;
       top: 50%;
       width: 100%;
+      @include text_style(16px, 400, $mainWhite);
+      position: absolute;
+      width: 100%;
+      text-align: center;
     }
     .item4 {
       display: flex;
@@ -728,20 +688,13 @@ button {
       justify-content: center;
       object-fit: cover;
     }
-
     .catalogue_item_img4 {
       height: 111px;
       object-fit: cover;
     }
-
-    .catalogue_item_text {
-      @include text_style(16px, 400, $mainWhite);
-      position: absolute;
-      width: 100%;
-    }
     .catalogue_item_text4 {
       top: 30px;
-      left: 0;
+      text-align: center;
     }
   }
   .content {
@@ -758,7 +711,7 @@ button {
     }
 
     .catalogue_item_text4 {
-      left: 0;
+      left: 40%;
       top: 10px;
     }
 
@@ -780,7 +733,6 @@ button {
       margin-bottom: 96px;
     }
   }
-
   .advantages {
     padding-top: 48px;
     padding-bottom: 81px;
@@ -797,7 +749,7 @@ button {
     gap: 48px;
     padding-top: 64px;
     padding-bottom: 109px;
-    .input_box_title_small{
+    .input_box_title_small {
       font-size: 14px;
     }
   }

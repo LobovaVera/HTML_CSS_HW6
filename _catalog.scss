@@ -3,7 +3,6 @@
 summary {
   display: block;
 }
-
 summary::-webkit-details-marker {
   display: none;
 }
@@ -46,14 +45,12 @@ summary::-webkit-details-marker {
       background-color: #fff;
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     }
-
     &[open] .catalog_filter_left_summary_heading {
       color: $mainColor;
     }
     &[open] path {
       fill: $mainColor;
     }
-
     &_summary {
       display: flex;
       gap: 11px;
@@ -61,13 +58,6 @@ summary::-webkit-details-marker {
       &_heading {
         @include text_style(14px, 600, $mainBlackColor);
       }
-      //   &_heading:hover {
-      //     text-shadow: 2px 2px 2px grey;
-      //   }
-      //   &_svg:hover {
-      //     border-radius: 20%;
-      //     box-shadow: 2px 2px 2px grey;
-      //   }
     }
     &_content {
       margin-top: 16px;

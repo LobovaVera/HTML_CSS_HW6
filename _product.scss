@@ -50,37 +50,35 @@ ul {
     }
   }
 }
-
-.carousel-inner {
-  margin: 0 auto;
-  display: block;
-  transition: 0.5s;
-  background-color: #f7f7f7;
-}
-.carousel-item-next,
-.carousel-item-prev,
-.carousel-item.active {
-  display: flex;
-  justify-content: center;
-}
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2998 23.2499L17.0498 15.4999L9.2998 7.7499L10.8498 4.6499L21.6998 15.4999L10.8498 26.3499L9.2998 23.2499Z' fill='black'/%3E%3C/svg%3E%0A");
-  background-color: rgba(42, 42, 42, 0.15);
-  padding: 8px;
-}
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.6998 7.7499L13.9498 15.4999L21.6998 23.2499L20.1498 26.3499L9.2998 15.4999L20.1498 4.6499L21.6998 7.7499Z' fill='black'/%3E%3C/svg%3E ");
-  background-color: rgba(42, 42, 42, 0.15);
-  padding: 8px;
-}
-
-.carousel-control-next-icon:hover {
-  background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2998 23.2499L17.0498 15.4999L9.2998 7.7499L10.8498 4.6499L21.6998 15.4999L10.8498 26.3499L9.2998 23.2499Z' fill='%23F16D7F'/%3E%3C/svg%3E ");
-}
-
-.carousel-control-prev-icon:hover {
-  background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.6998 7.7499L13.9498 15.4999L21.6998 23.2499L20.1498 26.3499L9.2998 15.4999L20.1498 4.6499L21.6998 7.7499Z' fill='%23F16D7F'/%3E%3C/svg%3E ");
+.carousel {
+  .carousel-inner {
+    margin: 0 auto;
+    display: block;
+    transition: 0.5s;
+    background-color: #f7f7f7;
+  }
+  .carousel-item-next,
+  .carousel-item-prev,
+  .carousel-item.active {
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2998 23.2499L17.0498 15.4999L9.2998 7.7499L10.8498 4.6499L21.6998 15.4999L10.8498 26.3499L9.2998 23.2499Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-color: rgba(42, 42, 42, 0.15);
+    padding: 8px;
+  }
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.6998 7.7499L13.9498 15.4999L21.6998 23.2499L20.1498 26.3499L9.2998 15.4999L20.1498 4.6499L21.6998 7.7499Z' fill='black'/%3E%3C/svg%3E ");
+    background-color: rgba(42, 42, 42, 0.15);
+    padding: 8px;
+  }
+  .carousel-control-next-icon:hover {
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2998 23.2499L17.0498 15.4999L9.2998 7.7499L10.8498 4.6499L21.6998 15.4999L10.8498 26.3499L9.2998 23.2499Z' fill='%23F16D7F'/%3E%3C/svg%3E ");
+  }
+  .carousel-control-prev-icon:hover {
+    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.6998 7.7499L13.9498 15.4999L21.6998 23.2499L20.1498 26.3499L9.2998 15.4999L20.1498 4.6499L21.6998 7.7499Z' fill='%23F16D7F'/%3E%3C/svg%3E ");
+  }
 }
 
 .description_box {
@@ -119,11 +117,7 @@ ul {
   margin-top: -64px;
 
   .product_descr_title {
-    color: #f16d7f;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include text_style(14px, 300, #f16d7f);
     margin-bottom: 12px;
     padding-top: 64px;
   }
@@ -133,36 +127,20 @@ ul {
   }
 
   .product_descr_title2 {
-    color: #4d4d4d;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include text_style(18px, 300, #4d4d4d);
     margin-bottom: 48px;
   }
-
   .product_descr_text {
-    color: #5e5e5e;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include text_style(14px, 300, #5e5e5e);
     margin-bottom: 32px;
   }
-
   .product_descr_price {
-    color: #ef5b70;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include text_style(24px, 300, #ef5b70);
     margin-bottom: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .product_descr_price_hr {
     width: 641px;
     margin-bottom: 64px;
@@ -175,7 +153,6 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 42px;
-    // padding-top: 64px;
     position: absolute;
     z-index: 2;
     top: 460px;
@@ -184,12 +161,7 @@ ul {
 .product_filter_details {
   // position: relative;
   .filter1 {
-    color: #6f6e6e;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    list-style: none;
+    @include text_style(14px, 400, #6f6e6e);
     padding-bottom: 6px;
   }
   .filter1::-webkit-details-marker {
@@ -243,35 +215,8 @@ ul {
         background-position: center center;
         background-size: 50% 50%;
       }
-
-      // /* стили при наведении курсора на checkbox */
-      // &_checkbox:not(:disabled):not(:checked) + label:hover::before {
-      //   border-color: #b3d7ff;
-      // }
-      // /* стили для активного состояния чекбокса (при нажатии на него) */
-      // &_checkbox:not(:disabled):active + label::before {
-      //   background-color: #6f6e6e;
-      //   border-color: #b3d7ff;
-      // }
-      // /* стили для чекбокса, находящегося в фокусе */
-      // &_checkbox:focus + label::before {
-      //   background-color: $mainColor;
-      // }
-      // /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-      // &_checkbox:focus:not(:checked) + label::before {
-      //   border-color: $mainColor;
-      // }
-      // /* стили для чекбокса, находящегося в состоянии disabled */
-      // &_checkbox:disabled + label::before {
-      //   background-color: #e9ecef;
-      // }
-
       &_label {
-        color: #6f6e6e;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include text_style(14px, 400, #6f6e6e);
       }
     }
   }
@@ -288,7 +233,7 @@ ul {
   }
 }
 @media (max-width: 767px) {
-  .top_menu{
+  .top_menu {
     flex-direction: column;
     gap: 32px;
   }
